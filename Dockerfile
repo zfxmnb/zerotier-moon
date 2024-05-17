@@ -10,6 +10,8 @@ RUN apt-get update && apt-get install -y curl && curl -s https://install.zerotie
 
 COPY startup.sh /startup.sh
 
+RUN chmod 777 /startup.sh
+
 EXPOSE 9993/udp
 
 ENTRYPOINT ["/startup.sh"]
