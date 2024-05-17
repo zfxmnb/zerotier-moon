@@ -39,7 +39,7 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/386,linux/arm/v7,linux/arm/v6
           push: true
           build-args: |
-            ALPINE_VERSION=${{ vars.ALPINE_VERSION }}
+            IMAGE_VERSION=${{ vars.IMAGE_VERSION }}
             ZT_VERSION=${{ vars.ZT_VERSION }}
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/zerotier-moon:${{ github.ref_name }}

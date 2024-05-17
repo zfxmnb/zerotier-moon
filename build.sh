@@ -1,1 +1,0 @@
-echo 'Image build process'

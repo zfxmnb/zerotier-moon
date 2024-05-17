@@ -1,14 +1,14 @@
-ARG ALPINE_VERSION=latest
+ARG IMAGE_VERSION=stable-slim
 
-FROM alpine:${ALPINE_VERSION}
+FROM debian:${IMAGE_VERSION}
 
 ARG ZT_VERSION=1.12.2
 
 LABEL maintainer="zfxmnb <fanx1949@gmail.com>"
 
-VOLUME [ "/var/lib/zerotier-one/moons.d" ]
+VOLUME "/var/lib/zerotier-one"
 
-RUN apk add --no-cache zerotier-one=${ZT_VERSION}
+RUN apt-get update && apt-get install -y zerotier-one=${ZT_VERSION}
 
 COPY startup.sh /startup.sh
 
