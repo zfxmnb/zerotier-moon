@@ -2,13 +2,11 @@ ARG IMAGE_VERSION=stable-slim
 
 FROM debian:${IMAGE_VERSION}
 
-ARG ZT_VERSION=1.12.2
-
 LABEL maintainer="zfxmnb <fanx1949@gmail.com>"
 
 VOLUME "/var/lib/zerotier-one"
 
-RUN apt-get update && apt-get install -y zerotier-one=${ZT_VERSION}
+RUN apt-get update && apt-get install -y curl && curl -s https://install.zerotier.com | bash
 
 COPY startup.sh /startup.sh
 

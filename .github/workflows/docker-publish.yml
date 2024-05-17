@@ -40,7 +40,6 @@ jobs:
           push: true
           build-args: |
             IMAGE_VERSION=${{ vars.IMAGE_VERSION }}
-            ZT_VERSION=${{ vars.ZT_VERSION }}
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/zerotier-moon:${{ github.ref_name }}
             ${{ secrets.DOCKER_USERNAME }}/zerotier-moon:latest
