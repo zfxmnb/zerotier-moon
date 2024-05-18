@@ -1,5 +1,5 @@
-# FROM debian:bookworm
-FROM ubuntu:20.04
+FROM debian:bookworm
+# FROM ubuntu:20.04
 
 LABEL maintainer="zfxmnb <fanx1949@gmail.com>"
 
