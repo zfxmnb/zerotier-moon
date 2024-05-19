@@ -9,6 +9,8 @@ RUN curl -s https://install.zerotier.com | sudo bash
 
 COPY startup.sh /startup.sh
 
+RUN chmod +x /startup.sh
+
 EXPOSE 9993/udp
 
 ENTRYPOINT ["/startup.sh"]
